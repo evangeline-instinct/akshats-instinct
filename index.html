@@ -21,7 +21,10 @@
   }
   main { max-width: 560px; margin: 0 auto; padding: 14vh 20px 10vh; }
   h1 { font-size: 18px; font-weight: 400; margin: 0; }
-  .site { margin: 0 0 48px; }
+  .site { margin: 0 0 24px; }
+  .pond-wrap { margin-bottom: 44px; }
+  #pond { display: block; width: 100%; height: 330px; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-tap-highlight-color: transparent; }
+  @media (max-width: 520px) { #pond { height: 270px; } }
   h2 { font-size: 18px; font-weight: 400; color: var(--muted); margin: 0; }
   section { margin: 0 0 32px; }
   p { margin: 0; }
@@ -34,6 +37,10 @@
   <h1>Akshat's Instinct</h1>
   <p class="site">akshatb [at] mail.instinct [dot] com</p>
 
+  <section class="pond-wrap">
+    <canvas id="pond" role="img" aria-label="An ASCII koi pond. Tap to feed the koi."></canvas>
+  </section>
+
   <section>
     <h2>Find me</h2>
     <p>
@@ -42,5 +49,6 @@
     </p>
   </section>
 </main>
+<script src="pond.js"></script>
 </body>
 </html>
